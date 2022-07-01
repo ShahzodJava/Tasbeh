@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:id="@+id/firstRelative">
+
+        <TextView
+            android:id="@+id/textSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size:"
+            android:textSize="20dp"
+            android:textStyle="bold|italic"
+            />
+
+        <Spinner
+            android:id="@+id/spinnerCounter"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/textSize"
+            android:background="@android:drawable/btn_dropdown"
+            android:textSize="30dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/firstRelative"
+        android:layout_marginTop="20dp"
+        android:id="@+id/secondRelative">
+
+        <TextView
+            android:id="@+id/textCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Count"
+            android:textSize="20dp"
+            android:textStyle="bold|italic"
+
+             />
+        <TextView
+            android:id="@+id/textViewCount"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="48dp"
+            android:layout_toRightOf="@+id/textCounter"
+            android:layout_marginLeft="40dp"
+            />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/imageViewTasbih"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_below="@+id/secondRelative"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_touch1_" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewTasbih"
+        android:layout_centerHorizontal="true"
+        android:text="Reset"
+
+
+        />
+
+
+</RelativeLayout>
