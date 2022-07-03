@@ -6,28 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<!--    <com.google.android.material.appbar.AppBarLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content">-->
-<!--        <androidx.appcompat.widget.Toolbar-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--    </com.google.android.material.appbar.AppBarLayout>-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_toolbar"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SmartSoft"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/ic_setting"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:id="@+id/settings"
+                />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
         android:id="@+id/firstRelative"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="100dp"
+        >
+
 
         <TextView
             android:id="@+id/textSize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
             android:text="Size:"
-            android:textSize="20dp"
-            android:textStyle="bold|italic" />
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinnerCounter"
@@ -36,7 +58,11 @@
             android:layout_marginLeft="40dp"
             android:layout_toRightOf="@+id/textSize"
             android:background="@android:drawable/btn_dropdown"
-            android:textSize="30dp" />
+            android:textSize="24dp"
+            android:textStyle="bold"
+
+
+            />
     </RelativeLayout>
 
     <RelativeLayout
@@ -51,37 +77,52 @@
             android:id="@+id/textCounter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Count"
-            android:textSize="20dp"
-            android:textStyle="bold|italic" />
+            android:text="Count:"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewCount"
-            android:layout_width="120dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="30dp"
             android:layout_toRightOf="@+id/textCounter"
             android:text="0"
-            android:textSize="48dp" />
+            android:textSize="24dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/textViewCount"
+            android:text="x0"
+            android:textSize="24dp"
+            android:textStyle="bold"/>
     </RelativeLayout>
-
 
     <ImageView
         android:id="@+id/imageViewTasbih"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_below="@+id/secondRelative"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:background="@null"
-        app:srcCompat="@drawable/ic_touch1_" />
+        app:srcCompat="@drawable/touchimage1" />
 
     <Button
         android:id="@+id/buttonReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageViewTasbih"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
-        android:text="Reset"/>
+        android:textColor="@color/white"
+        android:text="Reset"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
+
 
 
 </RelativeLayout>

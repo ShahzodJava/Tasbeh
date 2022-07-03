@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_toolbar"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/soundRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        >
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/ic_sound"
+            android:id="@+id/sound"
+
+            />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="100dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/vibrateRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soundRelative"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:id="@+id/vibrate"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/ic_vibrate"
+
+            />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="100dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/musicRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vibrateRelative"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:id="@+id/music"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/ic_music"
+
+            />
+
+        <Spinner
+            android:id="@+id/spinnerCounter"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="70dp"
+            android:layout_toRightOf="@+id/music"
+            android:background="@android:drawable/btn_dropdown"
+            android:textSize="24dp"
+            android:textStyle="bold"
+
+
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
