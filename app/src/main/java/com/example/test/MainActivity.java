@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.RotateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -56,6 +57,10 @@ public class MainActivity<Int> extends AppCompatActivity {
         imageViewTasbih.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                RotateAnimation rotateAnimation = new RotateAnimation(0,360,RotateAnimation.RELATIVE_TO_SELF,.5f,RotateAnimation.RELATIVE_TO_SELF,.5f);
+                rotateAnimation.setDuration(500);
+                imageViewTasbih.startAnimation(rotateAnimation);
 
                 count++;
                 if (count>countLimit) {
