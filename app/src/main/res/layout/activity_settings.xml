@@ -85,7 +85,7 @@
             android:id="@+id/music"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@mipmap/ic_music"
+            android:src="@mipmap/ic_music2"
 
             />
 
