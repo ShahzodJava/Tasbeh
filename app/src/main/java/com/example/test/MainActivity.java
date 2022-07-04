@@ -2,7 +2,10 @@ package com.example.test;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.PorterDuff;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,6 +24,7 @@ public class MainActivity<Int> extends AppCompatActivity {
     private Spinner spinner;
     private  String[] TASBEH = {"33", "99", "1000", "70000"};
     private int countLimit = 33;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +36,23 @@ public class MainActivity<Int> extends AppCompatActivity {
         buttonReset = findViewById(R.id.buttonReset);
         spinner = findViewById(R.id.spinnerCounter);
 
+        mp = MediaPlayer.create(this, R.raw.button29);
         count = 0;
+
 
         imageViewTasbih.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+
+                mp.start();
                 textViewCount.setText(Integer.toString(count));
                 count++;
-                if (count==countLimit) count = 0;
+                if (count == countLimit) count = 0;
             }
         });
+
+
 
         buttonReset.setOnClickListener(new View.OnClickListener() {
             @Override
