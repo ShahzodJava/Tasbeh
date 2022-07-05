@@ -58,9 +58,9 @@ public class MainActivity<Int> extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                RotateAnimation rotateAnimation = new RotateAnimation(0,360,RotateAnimation.RELATIVE_TO_SELF,.5f,RotateAnimation.RELATIVE_TO_SELF,.5f);
-                rotateAnimation.setDuration(500);
-                imageViewTasbih.startAnimation(rotateAnimation);
+//                RotateAnimation rotateAnimation = new RotateAnimation(0,360,RotateAnimation.RELATIVE_TO_SELF,.5f,RotateAnimation.RELATIVE_TO_SELF,.5f);
+//                rotateAnimation.setDuration(500);
+//                imageViewTasbih.startAnimation(rotateAnimation);
 
                 count++;
                 if (count>countLimit) {

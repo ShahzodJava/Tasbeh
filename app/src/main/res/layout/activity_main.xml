@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/primary_dark_color">
+    android:background="@color/white">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -110,15 +110,17 @@
         android:layout_centerHorizontal="true"
         app:cardCornerRadius="180dp"
         android:layout_marginTop="60dp"
-        app:cardBackgroundColor="@color/primary_color"
         app:cardElevation="4dp">
+        <!--app:cardBackgroundColor="@color/primary_color"-->
+
 
         <ImageView
             android:id="@+id/imageViewTasbih"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_touchimg"/>
+            android:src="@drawable/ic_touchimg"
+            android:background="@drawable/ripple"/>
     </androidx.cardview.widget.CardView>
 
 
